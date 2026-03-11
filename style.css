@@ -1,0 +1,465 @@
+:root {
+    --primary: #2d5a27; /* Hijau Tua */
+    --secondary: #4caf50; /* Hijau Terang */
+    --light: #f8f9fa;
+    --dark: #333;
+    --gray: #777;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.bg-light { background: var(--light); }
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--primary);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0; width: 100%;
+    background: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    text-decoration: none;
+    display: flex; 
+    align-items: center;
+    gap: 10px; /* Jarak antara logo dan teks */
+}
+
+.logo-icon {
+    height: 70px; /* Atur tinggi gambar sesuai selera agar proporsional dengan teks */
+    width: auto; /* Membiarkan lebar menyesuaikan tinggi agar tidak gepeng */
+    display: block; /* Mencegah spasi aneh di bawah gambar */
+}
+
+.logo span { color: var(--secondary); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--dark);
+    margin-left: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover { color: var(--secondary); }
+
+.menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 { font-size: 4rem; margin-bottom: 10px; }
+.subtitle { font-size: 1.5rem; margin-bottom: 30px; font-weight: 300; }
+.hero-info { margin-bottom: 40px; font-size: 1.2rem; }
+.divider { margin: 0 15px; opacity: 0.5; }
+
+.btn {
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.btn-primary { background: var(--secondary); color: var(--white); border: none; }
+.btn-primary:hover { background: var(--primary); transform: translateY(-3px); }
+.btn-outline { border: 2px solid var(--white); color: var(--white); }
+.btn-outline:hover { background: var(--white); color: var(--primary); }
+
+/* Grid Layouts */
+.grid-6 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+/* Cards */
+.card-feature {
+    text-align: center;
+    padding: 30px;
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+.card-feature:hover { transform: translateY(-10px); color: var(--secondary); }
+.card-feature i { font-size: 2.5rem; margin-bottom: 15px; }
+
+.card-unit {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.unit-img { height: 200px; background-size: cover; background-position: center; }
+
+.unit-body { padding: 25px; }
+.unit-body ul { list-style: none; margin: 15px 0; }
+.unit-body li { margin-bottom: 8px; color: var(--gray); }
+.unit-body i { color: var(--secondary); margin-right: 10px; }
+
+.price { font-size: 1.3rem; font-weight: 700; color: var(--primary); }
+
+.unit-footer { display: flex; justify-content: space-between; margin-top: 20px; }
+.btn-sm { padding: 8px 20px; border-radius: 5px; border: 1px solid #ddd; cursor: pointer; }
+.btn-wa { color: #25d366; text-decoration: none; font-weight: 600; }
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.gallery-grid img { width: 100%; border-radius: 10px; height: 180px; object-fit: cover; transition: 0.3s; cursor: pointer;}
+.gallery-grid img:hover { transform: scale(1.05); }
+
+/* Steps */
+.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; }
+.step span {
+    width: 50px; height: 50px; background: var(--primary); color: var(--white);
+    display: flex; align-items: center; justify-content: center; border-radius: 50%;
+    margin: 0 auto 15px; font-weight: 700;
+}
+
+/* Testimoni */
+.card-testi { text-align: center; padding: 30px; background: var(--white); border-radius: 15px; }
+.card-testi img { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px; }
+
+/* Location */
+.location-wrapper { display: flex; gap: 30px; flex-wrap: wrap; }
+.map-container { flex: 2; min-width: 300px; border-radius: 15px; overflow: hidden; }
+.location-info { flex: 1; min-width: 250px; }
+.location-info ul { list-style: none; }
+.location-info li { margin-bottom: 15px; font-weight: 600; display: flex; align-items: center; }
+.location-info i { color: var(--secondary); margin-right: 10px; font-size: 1.2rem; }
+
+/* CTA & Footer */
+.cta { background: var(--primary); color: var(--white); text-align: center; padding: 60px 0; }
+.cta h2 { margin-bottom: 30px; }
+footer { text-align: center; padding: 30px; background: #222; color: #777; font-size: 0.9rem; }
+
+/* Floating WA */
+/* 1. KEYFRAMES ANIMASI (Aturan Gerakannya) */
+@keyframes sembul-sembul {
+    0% {
+        /* Posisi awal: ukuran normal, tanpa bayangan ekstra */
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    50% {
+        /* Posisi tengah (puncak menyembul): ukuran sedikit membesar, 
+           dan ada bayangan 'sinar' memancar keluar */
+        transform: scale(1.2);
+        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6); /* Warna hijau WA transparan */
+    }
+    100% {
+        /* Kembali ke posisi awal agar animasi mulus */
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+}
+
+/* 2. PENERAPAN KE ELEMENT (Tombol Floating WA) */
+.floating-wa {
+    /* (CSS standar tombol WA kamu, pastikan ada bagian ini) */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366; /* Warna Hijau WA */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-decoration: none;
+    cursor: pointer;
+
+    /* --- INI BAGIAN UTAMA ANIMASINYA --- */
+    /* panggil nama keyframes: sembul-sembul */
+    /* durasi satu siklus: 2 detik (semakin kecil, semakin cepat) */
+    /* jenis gerakan: ease-in-out (halus) */
+    /* ulangi terus-menerus: infinite */
+    animation: sembul-sembul 2s ease-in-out infinite;
+
+    /* Opsional: Efek halus saat user mengarahkan kursor (hover) */
+    transition: all 0.3s ease;
+}
+
+/* Opsional: Berhenti menyembul saat di-hover user, agar mudah diklik */
+
+
+.floating-wa:hover {
+    animation-play-state: paused; /* Animasi berhenti */
+    transform: scale(1.15); /* Membesar sedikit lebih banyak */
+    background: #1b635a; /* Warna hijau WA tua */
+}
+
+
+
+/* Floating Tiktok */
+/* 1. KEYFRAMES ANIMASI (Aturan Gerakannya) */
+@keyframes sembul-sembul {
+    0% {
+        /* Posisi awal: ukuran normal, tanpa bayangan ekstra */
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    50% {
+        /* Posisi tengah (puncak menyembul): ukuran sedikit membesar, 
+           dan ada bayangan 'sinar' memancar keluar */
+        transform: scale(1.2);
+        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6); /* Warna hijau WA transparan */
+    }
+    100% {
+        /* Kembali ke posisi awal agar animasi mulus */
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+}
+
+/* 2. PENERAPAN KE ELEMENT (Tombol Floating Tiktok) */
+.floating-tiktok {
+    /* (CSS standar tombol Tiktok kamu, pastikan ada bagian ini) */
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    background: #000000; /* Warna Hijau Tiktok */
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-decoration: none;
+    cursor: pointer;
+
+    /* --- INI BAGIAN UTAMA ANIMASINYA --- */
+    /* panggil nama keyframes: sembul-sembul */
+    /* durasi satu siklus: 2 detik (semakin kecil, semakin cepat) */
+    /* jenis gerakan: ease-in-out (halus) */
+    /* ulangi terus-menerus: infinite */
+    animation: sembul-sembul 2s ease-in-out infinite;
+
+    /* Opsional: Efek halus saat user mengarahkan kursor (hover) */
+    transition: all 0.3s ease;
+}
+
+/* Opsional: Berhenti menyembul saat di-hover user, agar mudah diklik */
+
+
+.floating-tiktok:hover {
+    animation-play-state: paused; /* Animasi berhenti */
+    transform: scale(1.15); /* Membesar sedikit lebih banyak */
+    background: #1b635a; /* Warna hijau WA tua */
+}
+
+
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; }
+    .menu-toggle { display: block; }
+}
+
+/* Modal Style */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: 0;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0.8); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px; top: 10px;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.modal-body { display: flex; flex-wrap: wrap; }
+.modal-img { flex: 1; min-width: 300px; height: 400px; background-size: cover; background-position: center; }
+.modal-text { flex: 1; padding: 40px; min-width: 300px; }
+
+.modal-text h2 { color: var(--primary); margin-bottom: 15px; }
+.modal-text ul { list-style: none; margin: 20px 0; }
+.modal-text li { margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+
+@media (max-width: 600px) {
+    .modal-img { height: 250px; }
+}
+
+
+/* Container utama gambar di modal */
+.modal-img-container {
+    flex: 1;
+    min-width: 300px;
+    height: 400px;
+    position: relative;
+    background: #eee;
+}
+
+/* Area slider yang bisa di-scroll */
+.modal-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Agar scroll "berhenti" pas di gambar */
+    height: 100%;
+    scrollbar-width: none; /* Sembunyikan scrollbar di Firefox */
+}
+
+.modal-slider::-webkit-scrollbar {
+    display: none; /* Sembunyikan scrollbar di Chrome/Safari */
+}
+
+/* Style untuk setiap gambar di dalam slider */
+.modal-slider img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+/* Petunjuk kecil di bawah gambar */
+.slider-hint {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+    .modal-img-container { height: 250px; }
+}
+
+/* Container pembungkus slider */
+.modal-img-container {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Tombol Panah Umum */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.slider-btn:hover { background: white; color: var(--primary); }
+.prev-btn { left: 10px; }
+.next-btn { right: 10px; }

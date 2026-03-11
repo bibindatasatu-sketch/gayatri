@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gayatri Maksoem Village | Rumah Subsidi Serasa Komersil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo_gayatri2.png" alt="Logo Gayatri Village" class="logo-icon"></a>
+            <ul class="nav-links">
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#keunggulan">Keunggulan</a></li>
+                <li><a href="#tipe">Tipe Rumah</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#lokasi">Lokasi</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Gayatri Maksoem Village</h1>
+            <p class="subtitle">Rumah Subsidi Serasa Komersil</p>
+            <div class="hero-info">
+                <span>Harga Mulai <strong>168 Jutaan</strong></span>
+                <span class="divider">|</span>
+                <span>Cicilan Mulai <strong>1 Jutaan/Bulan</strong></span>
+            </div>
+            <div class="hero-btns">
+                <a href="https://wa.me/6283830952224?text=Halo%20Kak Rara%20Gayatri%20Maksoem%20Village,%20Saya ingin melakukan booking survey lokasi. Mohon info jadwal yang tersedia. Terima kasih." target="_blank" class="btn btn-primary">Booking Survey</a>
+                <a href="https://wa.me/6283830952224?text=Halo Kak Rara%20Gayatri%20Maksoem%20Village,%20saya%20ingin%20tanya%20info%20lebih%20lanjut" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                    <i class="fab fa-whatsapp"></i> Chat WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="keunggulan" class="section">
+        <div class="container">
+            <h2 class="section-title">Kenapa Memilih Kami?</h2>
+            <div class="grid-6">
+                <div class="card-feature"><i class="fas fa-map-marker-alt"></i><h3>Lokasi Strategis</h3></div>
+                <div class="card-feature"><i class="fas fa-tint-slash"></i><h3>Bebas Banjir</h3></div>
+                <div class="card-feature"><i class="fas fa-school"></i><h3>Dekat Sekolah</h3></div>
+                <div class="card-feature"><i class="fas fa-road"></i><h3>Akses Jalan Lebar</h3></div>
+                <div class="card-feature"><i class="fas fa-leaf"></i><h3>Lingkungan Nyaman</h3></div>
+                <div class="card-feature"><i class="fas fa-chart-line"></i><h3>Investasi Menjanjikan</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tipe" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Pilihan Tipe Unit</h2>
+            <div class="grid-3">
+                <div class="card-unit">
+                    <div class="unit-img" style="background-image: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="unit-body">
+                        <h3>Tipe 30/60</h3>
+                        <ul>
+                            <li><i class="fas fa-expand"></i> LB 30 m² / LT 60 m²</li>
+                            <li><i class="fas fa-bed"></i> 2 Kamar Tidur</li>
+                            <li><i class="fas fa-bath"></i> 1 Kamar Mandi</li>
+                        </ul>
+                        <p class="price">Mulai Rp 168 Juta</p>
+                        <div class="unit-footer">
+                            <button class="btn-sm" onclick="openDetail('30')">Detail</button>
+                            <a href="https://wa.me/6283830952224?text=Halo Kak Rara %20saya%20tertarik%20Tipe%2030" target="_blank" rel="noopener noreferrer" class="btn-wa"><i class="fab fa-whatsapp"></i> Chat</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-unit">
+                    <div class="unit-img" style="background-image: url('https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="unit-body">
+                        <h3>Tipe 36/72</h3>
+                        <ul>
+                            <li><i class="fas fa-expand"></i> LB 36 m² / LT 72 m²</li>
+                            <li><i class="fas fa-bed"></i> 2 Kamar Tidur</li>
+                            <li><i class="fas fa-bath"></i> 1 Kamar Mandi</li>
+                        </ul>
+                        <p class="price">Mulai Rp 185 Juta</p>
+                        <div class="unit-footer">
+                            <button class="btn-sm" onclick="openDetail('36')">Detail</button>
+                            <a href="https://wa.me/6283830952224?text=Halo Kak Rara %20saya%20tertarik%20Tipe%2036" target="_blank" rel="noopener noreferrer" class="btn-wa"><i class="fab fa-whatsapp"></i> Chat</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-unit highlight">
+                    <div class="unit-img" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80');"></div>
+                    <div class="unit-body">
+                        <h3>Tipe 45/90</h3>
+                        <ul>
+                            <li><i class="fas fa-expand"></i> LB 45 m² / LT 90 m²</li>
+                            <li><i class="fas fa-bed"></i> 3 Kamar Tidur</li>
+                            <li><i class="fas fa-bath"></i> 2 Kamar Mandi</li>
+                        </ul>
+                        <p class="price">Mulai Rp 220 Juta</p>
+                        <div class="unit-footer">
+                            <button class="btn-sm" onclick="openDetail('45')">Detail</button>
+                            <a href="https://wa.me/6283830952224?text=Halo Kak Rara%20saya%20tertarik%20Tipe%2045" target="_blank" rel="noopener noreferrer" class="btn-wa"><i class="fab fa-whatsapp"></i> Chat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeri" class="section">
+        <div class="container">
+            <h2 class="section-title">Galeri Perumahan</h2>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=600&q=80" alt="Tampak Depan">
+                <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=600&q=80" alt="Ruang Tamu">
+                <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80" alt="Kamar Tidur">
+                <img src="https://images.unsplash.com/photo-1556911223-e4524330697d?auto=format&fit=crop&w=600&q=80" alt="Dapur">
+                <img src="https://images.unsplash.com/photo-1595113333346-63e8e19c35b6?auto=format&fit=crop&w=600&q=80" alt="Lingkungan">
+            </div>
+        </div>
+    </section>
+
+    <section id="lokasi" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Lokasi Strategis</h2>
+            <div class="location-wrapper">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8166.4676479261525!2d111.453103766232!3d-7.399709216210016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79e70039cbe829%3A0x74d6df3c187dee62!2sPerumahan%20Gayatri%20Maksoem%20Village!5e0!3m2!1sid!2sid!4v1773241654427!5m2!1sid!2sid" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="location-info">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> 5 menit ke sekolah</li>
+                        <li><i class="fas fa-check-circle"></i> 10 menit ke pasar</li>
+                        <li><i class="fas fa-check-circle"></i> 15 menit ke rumah sakit</li>
+                        <li><i class="fas fa-check-circle"></i> Akses jalan utama</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Cara Membeli Rumah</h2>
+            <div class="steps-grid">
+                <div class="step"><span>1</span><p>Booking Fee</p></div>
+                <div class="step"><span>2</span><p>Survey Bank</p></div>
+                <div class="step"><span>3</span><p>Akad Kredit</p></div>
+                <div class="step"><span>4</span><p>Serah Terima Rumah</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Mereka?</h2>
+            <div class="grid-3">
+                <div class="card-testi">
+                    <img src="https://i.pravatar.cc/100?img=1" alt="User">
+                    <p>"Prosesnya cepat dan rumahnya sangat berkualitas untuk harga subsidi."</p>
+                    <h4>Budi Santoso</h4>
+                </div>
+                <div class="card-testi">
+                    <img src="https://i.pravatar.cc/100?img=5" alt="User">
+                    <p>"Lingkungannya asri dan aksesnya mudah ke tempat kerja saya."</p>
+                    <h4>Siti Aminah</h4>
+                </div>
+                <div class="card-testi">
+                    <img src="https://i.pravatar.cc/100?img=8" alt="User">
+                    <p>"Investasi terbaik untuk masa depan keluarga kecil kami."</p>
+                    <h4>Rian Wijaya</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Booking Survey Sekarang Sebelum Unit Habis</h2>
+            <a href="https://wa.me/6283830952224?text=Halo%20Kak Rara%20Gayatri%20Maksoem%20Village,%20saya%20baru%20saja%20melihat%20website%20Anda%20dan%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20perumahan%20ini.%20Bisa%20dibantu?" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <i class="fab fa-whatsapp"></i> Chat WhatsApp Marketing
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Gayatri Maksoem Village. All Rights Reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/6283830952224?text=Halo%20Kak Rara%20Gayatri%20Maksoem%20Village,%20saya%20baru%20saja%20melihat%20website%20Anda%20dan%20ingin%20bertanya%20lebih%20lanjut%20mengenai%20perumahan%20ini.%20Bisa%20dibantu?" target="_blank" rel="noopener noreferrer" class="floating-wa">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.tiktok.com/@gayatrimaksoemvil?_r=1&_t=ZS-94bTcrvawcf" target="_blank" rel="noopener noreferrer" class="floating-tiktok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+
+    <div id="unitModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">×</span>
+        <div class="modal-body">
+            <div class="modal-img-container">
+                <button class="slider-btn prev-btn" onclick="moveSlider('prev')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="modal-slider" id="modalSlider">
+                    </div>
+
+                <button class="slider-btn next-btn" onclick="moveSlider('next')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div class="slider-hint">
+                    <i class="fas fa-arrows-left-right"></i> Geser untuk foto lain
+                </div>
+            </div>
+
+            <div class="modal-text">
+                <h2 id="modalTitle">Tipe Rumah</h2>
+                <p id="modalDesc">Deskripsi lengkap.</p>
+                <ul id="modalSpecs"></ul>
+                <div class="modal-cta">
+                    <a href="" id="modalWaLink" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Tanya Detail Via WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
