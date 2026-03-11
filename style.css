@@ -212,18 +212,18 @@ footer { text-align: center; padding: 30px; background: #222; color: #777; font-
 @keyframes sembul-sembul {
     0% {
         /* Posisi awal: ukuran normal, tanpa bayangan ekstra */
-        transform: scale(1);
+        transform: scale(0.9);
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
     50% {
         /* Posisi tengah (puncak menyembul): ukuran sedikit membesar, 
            dan ada bayangan 'sinar' memancar keluar */
-        transform: scale(1.2);
+        transform: scale(1.1);
         box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6); /* Warna hijau WA transparan */
     }
     100% {
         /* Kembali ke posisi awal agar animasi mulus */
-        transform: scale(1);
+        transform: scale(0.9);
         box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }
 }
@@ -462,4 +462,5 @@ footer { text-align: center; padding: 30px; background: #222; color: #777; font-
 
 .slider-btn:hover { background: white; color: var(--primary); }
 .prev-btn { left: 10px; }
+
 .next-btn { right: 10px; }
