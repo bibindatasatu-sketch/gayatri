@@ -282,7 +282,7 @@ footer { text-align: center; padding: 30px; background: #222; color: #777; font-
         /* Posisi tengah (puncak menyembul): ukuran sedikit membesar, 
            dan ada bayangan 'sinar' memancar keluar */
         transform: scale(1.2);
-        box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6); /* Warna hijau WA transparan */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Warna hijau WA transparan */
     }
     100% {
         /* Kembali ke posisi awal agar animasi mulus */
@@ -295,7 +295,7 @@ footer { text-align: center; padding: 30px; background: #222; color: #777; font-
 .floating-tiktok {
     /* (CSS standar tombol Tiktok kamu, pastikan ada bagian ini) */
     position: fixed;
-    bottom: 120px;
+    bottom: 100px;
     right: 30px;
     background: #000000; /* Warna Hijau Tiktok */
     color: white;
@@ -464,6 +464,5 @@ footer { text-align: center; padding: 30px; background: #222; color: #777; font-
 .prev-btn { left: 10px; }
 
 .next-btn { right: 10px; }
-
 
 
